@@ -18,7 +18,7 @@ csvfile = open('outputs/manifestsHMM.csv', 'wb')
 writer = csv.writer(csvfile, delimiter=',')
 writer.writerow(['epaNumber']+['year'] + ['filename'] + ['fileOpener'])
 
-g = open('allforMans.csv', 'rt')
+g = open('inputs/allforMans.csv', 'rt')
 
 reader = csv.reader(f)
 secondReader = csv.reader(g)
