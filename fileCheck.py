@@ -6,17 +6,17 @@ import os
 switch = True
 while switch == True:
     try:
-        f = open('data.csv', 'rt')
+        f = open('inputs/data.csv', 'rt')
         switch = False
     except:
         print "Sorry, the database could not be opened"
         switch = False
 
-csvfile = open('FilesTBD.csv', 'wb')
+csvfile = open('inputs/FilesTBD.csv', 'wb')
 writer = csv.writer(csvfile, delimiter=',')
 ##writer.writerow(['year'] + ['filename'] + ['directory'])
 
-csvfileTotal = open('allImportsforHMM.csv', 'wb')
+csvfileTotal = open('outputs/allImportsforHMM.csv', 'wb')
 totalWriter = csv.writer(csvfileTotal, delimiter=',')
 totalWriter.writerow(['year'] + ['filename']+['directory'])
     
@@ -24,7 +24,7 @@ reader = csv.reader(f)
 row_count = sum(1 for row in reader)
 
 ##pull filename from dir
-rootDir = 'data/EPA follow up data OCR'
+rootDir = 'data/EPA follow up data OCR' #not currently available
 for dirName, subdirList, fileList in os.walk(rootDir):
     print('Found directory: %s' % dirName)
     for fname in fileList:

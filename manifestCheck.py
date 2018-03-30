@@ -6,13 +6,13 @@ import os
 switch = True
 while switch == True:
     try:
-        f = open('gephi.csv', 'rt')
+        f = open('inputs/gephi.csv', 'rt')
         switch = False
     except:
         print "Sorry, the database could not be opened"
         switch = False
 
-csvfile = open('manifestCheck.csv', 'wb')
+csvfile = open('outputs/manifestCheck.csv', 'wb')
 writer = csv.writer(csvfile, delimiter=',')
 writer.writerow(['manifest #1'] + ['filename1'] + ['manifest #2'] + ['filename2'])
 

@@ -1,12 +1,13 @@
 import math
 import csv
 import os
+import json
 
 ##Try to load the CSV files. If it doesn't exist, exit.
 switch = True
 while switch == True:
     try:
-        f = open('2011-2012 shipment network analysis by company USE.csv', 'rt')
+        f = open('inputs/2011-2012 shipment network analysis by company.csv', 'rt')
         switch = False
     except:
         print "Sorry, the database could not be opened"
@@ -72,10 +73,9 @@ for row in reader:
         counter = 1     
 f.close()
 
-import json
 dic = {"nodes": nodesList, "links": linksList, "exports": shipsMade, "imports": shipsRecd}
 json = json.dumps(dic)
-j= open('trades11-12.json', 'w+')
+j= open('outputs/trades11-12.json', 'w+')
 j.write(json)
 j.close()
 

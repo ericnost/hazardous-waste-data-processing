@@ -6,7 +6,7 @@ import os
 switch = True
 while switch == True:
     try:
-        f = open('gephi.csv', 'rt')
+        f = open('inputs/gephi.csv', 'rt')
         switch = False
     except:
         print "Sorry, the database could not be opened"
@@ -14,12 +14,11 @@ while switch == True:
 
 waste = raw_input("What waste do you want to know about?(Hint: USE CAPS!) ")
 
-csvfile = open(waste+'.csv', 'wb')
+csvfile = open('outputs/'+waste+'.csv', 'wb')
 writer = csv.writer(csvfile, delimiter=',')
 writer.writerow(['exporter'] + ['importer'])
 
 reader = csv.reader(f)       
-
 
 for row in reader:
     if waste in row[12]:

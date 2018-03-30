@@ -8,13 +8,13 @@ import os
 switch = True
 while switch == True:
     try:
-        f = open('allImportsforHMM.csv', 'rt')
+        f = open('inputs/allImportsforHMM.csv', 'rt')
         switch = False
     except:
         print "Sorry, the database could not be opened"
         switch = False
 
-csvfile = open('manifestsHMM1-21-16.csv', 'wb')
+csvfile = open('outputs/manifestsHMM.csv', 'wb')
 writer = csv.writer(csvfile, delimiter=',')
 writer.writerow(['epaNumber']+['year'] + ['filename'] + ['fileOpener'])
 
