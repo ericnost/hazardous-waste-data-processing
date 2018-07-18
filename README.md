@@ -4,6 +4,7 @@ Python scripts for integrating CSVs related to hazardous waste data. Learn more 
 
 Input data is variously in gephi.csv or data.csv (both of which are deprecated as of 3/29/18)
 
+- `scripts.R` - processes hazardous waste dataset through various statistical analyses
 - `gephi.py` - takes the hazardous waste dataset and produces exporter/importer company pairs for social network analysis
 - `lookup.py` - searches the data for shipments of hazardous waste descriptions matching those of a user-entered search term
 - `manifestCheck.py` - checks whether any of the original PDFs contained the same manifest
